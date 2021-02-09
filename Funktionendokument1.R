@@ -14,17 +14,17 @@ Funktion1(x)
 
 #c)
 Funktion3 <- function(x){
-  print("Kovarianz Bravais-Pearson" <- cov(x, y, method = "pearson"))
-  print("Kovarianz Kendall" <- cov(x,y, method = "kendall"))
-  print("Kovarianz Spearman" <- cov(x,y, method = "spearman"))
-  print("Korrelation" <- cor(x,y))
+  print("Korrelation Bravais-Pearson" <- cor(x, y, method = "pearson"))
+  print("Korrelation Kendall" <- cor(x,y, method = "kendall"))
+  print("Korrelation Spearman" <- cor(x,y, method = "spearman"))
 }
 
 Funktion3(x)
 
+#Kovarianzen miteinander vergleichen
+#Die Kovarianz von 
 
-
-
+#e)
 
 Funktion5<-function(x){
   if (!is.numeric(x)) stop("Eingabe muss numerisch sein.")
