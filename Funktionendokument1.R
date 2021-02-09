@@ -13,13 +13,13 @@ Funktion1 <- function(x){
 Funktion1(x)
 
 #c)
-Funktion3 <- function(x){
+Funktion3 <- function(x,y){
   print("Korrelation Bravais-Pearson" <- cor(x, y, method = "pearson"))
   print("Korrelation Kendall" <- cor(x,y, method = "kendall"))
   print("Korrelation Spearman" <- cor(x,y, method = "spearman"))
 }
 
-Funktion3(x)
+Funktion3(x,y)
 
 #Kovarianzen miteinander vergleichen
 #Die Kovarianz von 
