@@ -21,3 +21,27 @@ Funktion3 <- function(x){
 }
 
 Funktion3(x)
+
+
+
+
+
+Funktion5<-function(x){
+  if (!is.numeric(x)) stop("Eingabe muss numerisch sein.")
+  n<-length(x)
+  y<-c(NA)
+  for( i in 1:n) {
+  if(x[i]<=quantile(x,0.25)){
+    y[i]<-"niedrig"
+  }
+  if(x[i]>quantile(x,0.25)& x[i]<quantile(x,0.75)){
+      y[i]<-"mittel"
+  }
+  if(x[i]>=quantile(x,0.75)){
+      y[i]<-"hoch"
+    }
+  }
+  t<-table(y)
+  print(list("Vektor"=y,"Tabelle"=t))
+}
+Funktion5(x)
