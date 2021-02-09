@@ -3,10 +3,14 @@
 #a)
 #arithmetisches Mittel
 
-mymean <- function(x){
-  sum(x)/length(x)
+mean(x)
+var(x)
+median(x)
+sd(x)
+
+Funktion1 <- function(x){
+  print("arithmetisches Mittel" <- mean(x))
+  print("Varianz" <- var(x))
 }
 
-myvar <- function(x){
-  1/(length(x)-1)*sum((x-mymean(x))^2)
-}
+Funktion1(x)
