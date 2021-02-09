@@ -13,7 +13,7 @@ Data$Interesse_an_Mathematik <- as.numeric(Data$Interesse_an_Mathematik)
 Data$Interesse_am_Programmieren <- as.numeric(Data$Interesse_am_Programmieren)
 
 Data$ID <- as.numeric(Data$ID)
-Data$Alter <- as.numeric(Data$ID)
+Data$Alter <- as.numeric(Alter)
 
 #Interesse an Mathematik
 IMM <-sample(1:7, size = sum(Data$Studienfach=="Mathematik"), replace = T, prob = c(0.001, 0.009, 0.04, 0.05, 0.1, 0.3, 0.5) )
@@ -61,8 +61,9 @@ Data$Mathe_LK[which(Data$Studienfach == "Statistik")] <- Mathe_LKS
 Data$Mathe_LK[which(Data$Studienfach == "Data Science")] <- Mathe_LKD
 Data$Mathe_LK[which(Data$Studienfach == "Informatik")] <- Mathe_LKI
 
-setwd("C:\\Users\\danus\\OneDrive\\Dokumente\\GitHub\\GruppenarbeitWA2021")
-write.csv(Data, file ="Datensatz_Simmulation.csv" )
+#setwd("C:\\Users\\danus\\OneDrive\\Dokumente\\GitHub\\GruppenarbeitWA2021")
+#setwd("C:/Users/lenovo/Desktop/WS20-21/WA/GruppenarbeitWA2021")
+write.csv(Data, file ="Datensatz_Simulation.csv" )
 
 
 
