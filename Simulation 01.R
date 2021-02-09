@@ -1,5 +1,6 @@
-#WA-Github Aufgabe
+#Simulation
 
+set.seed(2020)
 ID <- 1:100
 Alter <- round(rnorm(100, mean=25, sd=2), digits = 0)
 Studienfach <- sample(c("Statistik", "Data Science", "Informatik", "Mathematik"), size = 100, replace = T, prob = c(0.3, 0.3, 0.25, 0.15))
@@ -10,6 +11,10 @@ Data <- cbind(ID, Alter, Studienfach, Interesse_an_Mathematik, Interesse_am_Prog
 Data <- as.data.frame(Data)
 Data$Interesse_an_Mathematik <- as.numeric(Data$Interesse_an_Mathematik)
 Data$Interesse_am_Programmieren <- as.numeric(Data$Interesse_am_Programmieren)
+
+Data$ID <- as.numeric(Data$ID)
+Data$Alter <- as.numeric(Data$ID)
+
 #Interesse an Mathematik
 IMM <-sample(1:7, size = sum(Data$Studienfach=="Mathematik"), replace = T, prob = c(0.001, 0.009, 0.04, 0.05, 0.1, 0.3, 0.5) )
 
@@ -56,8 +61,8 @@ Data$Mathe_LK[which(Data$Studienfach == "Statistik")] <- Mathe_LKS
 Data$Mathe_LK[which(Data$Studienfach == "Data Science")] <- Mathe_LKD
 Data$Mathe_LK[which(Data$Studienfach == "Informatik")] <- Mathe_LKI
 
-
-
+setwd("C:\\Users\\danus\\OneDrive\\Dokumente\\GitHub\\GruppenarbeitWA2021")
+write.csv(Data, file ="Datensatz_Simmulation.csv" )
 
 
 
