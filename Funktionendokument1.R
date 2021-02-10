@@ -12,19 +12,47 @@ Funktion1 <- function(x){
 
 Funktion1(x)
 
-#c)
-Funktion3 <- function(x){
-  print("Kovarianz Bravais-Pearson" <- cov(x, y, method = "pearson"))
-  print("Kovarianz Kendall" <- cov(x,y, method = "kendall"))
-  print("Kovarianz Spearman" <- cov(x,y, method = "spearman"))
-  print("Korrelation" <- cor(x,y))
+#b)
+
+funktion2 <- function(x,...){
+  haeuf <- table(x)      #haufigkeitstabelle
+  modal <- max(x)        #modalwert
+  print(list("Tabelle"= haeuf, "Modalwert"=modal))
 }
 
-Funktion3(x)
+funktion2(x)
 
+#c)
+Funktion3 <- function(x,y){
+  print("Korrelation Bravais-Pearson" <- cor(x, y, method = "pearson"))
+  print("Korrelation Kendall" <- cor(x,y, method = "kendall"))
+  print("Korrelation Spearman" <- cor(x,y, method = "spearman"))
+}
 
+Funktion3(x,y)
 
+#Kovarianzen miteinander vergleichen
+#Die Kovarianz von 
 
+#d)
+
+funktion4 <- function(x,y,...){
+  if(!is.numeric(x) && !is.numeric(y)) stop("Mindestens ein Objekt muss numerisch sein")
+  if(!(length(x)==length(y))) stop("Objekte muessen die selbe Laenge haben")
+  gr <- round(min(x)+(range(x)[2]-range(x)[1])/2,digits=0)
+  a <- length(which(x < gr & y == T))
+  b <- length(which(x < gr & y == F))
+  c <- length(which(x >= gr & y == T))
+  d <- length(which(x >= gr & y == F))
+  rG <- (a*d-b*c)/sqrt((a+b)*(c+d)*(a+c)*(b+d))  #gruppierter Bravais Pearson
+  print(rG)
+}
+
+funktion4(x,y)
+
+#gibt gruppierten Bravais Pearson Korrelationskoeffizienten aus
+
+#e)
 
 #e)
 
