@@ -34,6 +34,29 @@ Funktion3(x,y)
 #Kovarianzen miteinander vergleichen
 #Die Kovarianz von 
 
+
+
+fun1 <- function(x,y,...){
+  Kreuzt <- table(x, y)
+  Z <- margin.table(Kreuzt, 1)
+  S <- margin.table(Kreuzt, 2)
+  n <- sum(Z)
+  K <- length(Z)
+  L <- length(S)
+  X_quadr <- matrix(0, nrow = K, ncol = L)
+  for (i in 1:K) {
+    for (j in 1:L) {
+      X_quadr[i,j] <- ((Kreuzt[i,j]^2) / (Z[i] * S[j]))
+    }
+  }
+  chiquadr <- (n*(sum(X_quadr)-1))
+  print(list(Chi_Quadrat = chiquadr, Pearsons_Kontingenz_ndex = sqrt(chiquadr/(chiquadr+n)),
+             Korrigierter_Pearson_Index = sqrt(min(K,L)/(min(K,L)-1))*sqrt(chiquadr/(chiquadr+n))))
+}
+
+#Kontingenzkoeffizienten um zusammenhänge zwischen zwei Kategorialen Variablen zu betrachten
+
+
 #d)
 
 funktion4 <- function(x,y,gr){
