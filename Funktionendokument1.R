@@ -74,7 +74,7 @@ funktion4(x,y)
 
 #gibt gruppierten Bravais Pearson Korrelationskoeffizienten aus
 
-#e)
+
 
 #e)
 
