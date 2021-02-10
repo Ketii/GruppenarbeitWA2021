@@ -74,3 +74,27 @@ Funktion5<-function(x){
   print(list("Vektor"=y,"Tabelle"=t))
 }
 Funktion5(x)
+
+
+
+#f)
+
+Funktion6 <- function(vec1, vec2, vec3, vec4){
+  par(mfrow = c(2,2),oma = c(0, 0, 2, 0))
+  
+  barplot(table(vec1), ylab= "absolute Haeufigkeiten", xlab= deparse(substitute(vec1)),
+          ylim = c(0, max(table(vec1)+5)), col = blues9, main=deparse(substitute(vec1)), cex.main= 1.5)
+  
+  pie(table(vec2), radius = 1, main=deparse(substitute(vec2)), cex.main= 1.5)
+  
+  barplot(table(vec3), ylab= "absolute Haeufigkeiten", xlab= deparse(substitute(vec3)),
+          ylim = c(0, max(table(vec3)+5)), col=blues9, main=deparse(substitute(vec3)), cex.main= 1.5)
+  
+  pie(table(vec4), radius=1, main=deparse(substitute(vec4)), cex.main= 1.5)
+  
+  mtext("Visualisierung von kategorialen Variablen", outer = TRUE, cex = 2)
+}
+
+#es werden 4 einzelne Datenvektoren als eingabe erwartet
+#die Vektoren muessen des Typs character sein
+#die graden vektoren werden als Kreisdiagramm und die ungraden Vektoren als Stabdiagramm dargestellt
