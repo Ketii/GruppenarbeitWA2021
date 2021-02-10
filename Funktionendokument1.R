@@ -53,8 +53,10 @@ funktion4(x,y)
 
 #e)
 
+#e)
+
 Funktion5<-function(x){
-  if (!is.numeric(x)) stop("Eingabe muss numerisch sein.")
+  if (!is.numeric(x)) stop("Die Variablen müssen mindestens ordinal sein")
   n<-length(x)
   y<-c(NA)
   for( i in 1:n) {
