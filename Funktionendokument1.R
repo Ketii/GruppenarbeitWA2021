@@ -36,16 +36,15 @@ Funktion3(x,y)
 
 #d)
 
-funktion4 <- function(x,y,...){
+funktion4 <- function(x,y,gr){
   if(!is.numeric(x) && !is.numeric(y)) stop("Mindestens ein Objekt muss numerisch sein")
   if(!(length(x)==length(y))) stop("Objekte muessen die selbe Laenge haben")
-  gr <- round(min(x)+(range(x)[2]-range(x)[1])/2,digits=0)
-  a <- length(which(x < gr & y == T))
-  b <- length(which(x < gr & y == F))
-  c <- length(which(x >= gr & y == T))
-  d <- length(which(x >= gr & y == F))
-  rG <- (a*d-b*c)/sqrt((a+b)*(c+d)*(a+c)*(b+d))  #gruppierter Bravais Pearson
-  print(rG)
+  if(missing(gr)) {
+    gr <- round(min(x)+(range(x)[2]-range(x)[1])/2,digits=0)}
+  else {
+    gr <- gr
+  }
+  grbp(x,y,gr)
 }
 
 funktion4(x,y)
