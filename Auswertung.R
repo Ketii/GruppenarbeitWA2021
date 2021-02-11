@@ -174,8 +174,14 @@ funktion2(Data$Interesse_am_Programmieren)
 #[1] 7
 
 
+funktion2(Data$Mathe_LK)
+#$`Tabelle`
+#x
+#Ja Nein 
+#81   19 
 
-#Mathe-Lk ist keine metrische Variable
+#$Modalwert
+#[1] "Ja"
 
 
 >>>>>>> b7638749a51564283b6bb8a4f12d638abafc3344
