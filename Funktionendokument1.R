@@ -1,8 +1,6 @@
 #Funktionsscript 1
 
 #a)
-#arithmetisches Mittel
-
 
 Funktion1 <- function(x){
   print("arithmetisches Mittel" <- mean(x))
@@ -31,8 +29,6 @@ Funktion3 <- function(x,y){
 
 Funktion3(x,y)
 
-#Kovarianzen miteinander vergleichen
-#Die Kovarianz von 
 
 
 
