@@ -184,4 +184,4 @@ funktion2(Data$Mathe_LK)
 #[1] "Ja"
 
 
->>>>>>> b7638749a51564283b6bb8a4f12d638abafc3344
+
