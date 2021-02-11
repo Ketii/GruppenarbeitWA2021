@@ -3,12 +3,17 @@
 #a)
 
 Funktion1 <- function(x){
-  print("arithmetisches Mittel" <- mean(x))
-  print("Median" <- median(x))
-  print("Standardabweichung" <- sd(x))
+  
+  arithmetisches <- mean(x)
+  Median <- median(x)
+  Standardabweichung <- sd(x)
+  
+  print(list("Arithmetisches Mittel" = arithmetisches, Median = Median, Standardabweichung = Standardabweichung))
 }
 
 Funktion1(x)
+
+#Es werden typische Lagemaße ausgegeben 
 
 #b)
 
@@ -21,18 +26,8 @@ funktion2 <- function(x,...){
 funktion2(x)
 
 #c)
-Funktion3 <- function(x,y){
-  print("Korrelation Bravais-Pearson" <- cor(x, y, method = "pearson"))
-  print("Korrelation Kendall" <- cor(x,y, method = "kendall"))
-  print("Korrelation Spearman" <- cor(x,y, method = "spearman"))
-}
 
-Funktion3(x,y)
-
-
-
-
-fun1 <- function(x,y,...){
+Funktion3 <- function(x,y,...){
   Kreuzt <- table(x, y)
   Z <- margin.table(Kreuzt, 1)
   S <- margin.table(Kreuzt, 2)
@@ -50,8 +45,7 @@ fun1 <- function(x,y,...){
              Korrigierter_Pearson_Index = sqrt(min(K,L)/(min(K,L)-1))*sqrt(chiquadr/(chiquadr+n))))
 }
 
-#Kontingenzkoeffizienten um zusammenh�nge zwischen zwei Kategorialen Variablen zu betrachten
-
+#Kontingenzkoeffizienten, um Zusammenhänge zwischen zwei kategorialen Variablen zu betrachten
 
 #d)
 
