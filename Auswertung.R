@@ -185,3 +185,61 @@ funktion2(Data$Mathe_LK)
 
 
 >>>>>>> b7638749a51564283b6bb8a4f12d638abafc3344
+
+
+
+#Funktion 5 
+
+Funktion5
+#mit dieser Funktion betrachten wir wieviele Beobachtungen kleiner-gleich dem jeweiligen 25 % 
+#und größer-gleich dem 75% Quantil der Variable sind 
+
+#Alter
+Funktion5(Datensatz$Alter)
+
+#$Tabelle
+#y
+#hoch  mittel niedrig 
+#25      42      33 
+
+#33 Beobachtungen der Variable Alter sind kleiner-gleich 24, dem 25 % Quantil, 25 Beobachtungen 
+#liegen sind größer-gleich 27, dem 75 % Quantil der Variable Alter. Dies lässt darauf schließen, 
+#dass die Altersverteilung leicht rechts-schief ist und die Gruppe der jungen Befragten stärker 
+#vertreten ist als die Gruppe der älteren Befragten
+
+#Interesse an Mathematik 
+Funktion5(Datensatz$Interesse_an_Mathematik)
+#$Tabelle
+#y
+#hoch  mittel niedrig 
+#39      24      37 
+
+#37 Beobachtungen sind kleiner-gleich 5, dem 25 % Quantil der Variable "Interesse an Mathematik", 
+#39 Beobachtungen sind größer-gleich 7, dem 75 % Quantil. Es haben also die meisten Befragten
+#ein sehr hohes Interesse an Mathematik.
+
+#Interesse am Programmieren
+table(Datensatz$Interesse_am_Programmieren)
+Funktion5(Datensatz$Interesse_am_Programmieren)
+#$Tabelle
+#y
+#hoch  mittel niedrig 
+#33      40      27 
+
+#27 Beobachtungen sind kleiner-gleich 3, dem 25 % Quantil und 33 Beobachtungen sind größer-gleich
+#7, dem 75 % Quantil der Variable "Interesse am Programmieren". Die häufigste Antwort der 
+#Befragten auf die Frage nach ihrem Interesse am Programmieren war also die höchsmögliche Punktzahl.
+
+#Funktion 6
+
+Funktion6
+#Diese Funktion beschreibt den Datensatz visuell
+
+Funktion6(Datensatz$Alter, Datensatz$Mathe_LK, Datensatz$Interesse_an_Mathematik, Datensatz$Studienfach )
+
+#Bie beiden Balkendiagramme bestätigen unsere Beobachtungen, die wir mit Hilfe von Funktion 5
+#getroffen haben. 
+#Das Kreisdiagramm zur Variable "Mathe LK" zeigt deutlich, dass die Befragten, die einen Mathe-
+#Leistungskurs belegten überwiegt
+#Das Kreisdiagramm zur Variable "Studienfach" zeigt, dass Statistik Studierende unter den 
+#Befragten am stärksten vertreten waren. 
