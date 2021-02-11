@@ -38,7 +38,7 @@ Funktion1(Data$Interesse_am_Programmieren)
 #das arithmetische Mittel 4.94, der Median 5 und die Standardabweichung ca. 1.9
 
 
-#Mathe-Lk ist keine metrische Variable
+#Mathe-Lk ist keine metrische Variable.
 
 
 
