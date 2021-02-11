@@ -11,9 +11,9 @@ Funktion1 <- function(x){
   print(list("Arithmetisches Mittel" = arithmetisches, Median = Median, Standardabweichung = Standardabweichung))
 }
 
-Funktion1(x)
 
-#Es werden typische Lagemaße ausgegeben 
+
+#Es werden typische Lagemasse ausgegeben 
 
 #b)
 
@@ -23,7 +23,6 @@ funktion2 <- function(x,...){
   print(list("Tabelle"= haeuf, "Modalwert"=modal))
 }
 
-funktion2(x)
 
 #c)
 
@@ -45,7 +44,7 @@ Funktion3 <- function(x,y,...){
              Korrigierter_Pearson_Index = sqrt(min(K,L)/(min(K,L)-1))*sqrt(chiquadr/(chiquadr+n))))
 }
 
-#Kontingenzkoeffizienten, um Zusammenhänge zwischen zwei kategorialen Variablen zu betrachten
+#Kontingenzkoeffizienten, um Zusammenh�enge zwischen zwei kategorialen Variablen zu betrachten
 
 #d)
 
@@ -60,7 +59,7 @@ funktion4 <- function(x,y,gr){
   grbp(x,y,gr)
 }
 
-funktion4(x,y)
+
 
 #gibt gruppierten Bravais Pearson Korrelationskoeffizienten aus
 
@@ -69,7 +68,7 @@ funktion4(x,y)
 #e)
 
 Funktion5<-function(x){
-  if (!is.numeric(x)) stop("Die Variablen müssen mindestens ordinal sein")
+  if (!is.numeric(x)) stop("Die Variablen muessen mindestens ordinal sein")
   n<-length(x)
   y<-c(NA)
   for( i in 1:n) {
@@ -86,7 +85,7 @@ Funktion5<-function(x){
   t<-table(y)
   print(list("Vektor"=y,"Tabelle"=t))
 }
-Funktion5(x)
+
 
 
 
