@@ -19,7 +19,7 @@ Funktion1(x)
 
 funktion2 <- function(x,...){
   haeuf <- table(x)      #haufigkeitstabelle
-  modal <- max(x)        #modalwert
+  modal <- names(which.max(table(x)))        #modalwert
   print(list("Tabelle"= haeuf, "Modalwert"=modal))
 }
 
