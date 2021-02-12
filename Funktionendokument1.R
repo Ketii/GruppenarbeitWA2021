@@ -24,7 +24,7 @@ funktion2 <- function(x,...){
 
 
 #c)
-Funktion3  <- function(x,y,...){
+Funktion3  <- function(x,y){
   Kreuzt <- table(x, y)
   Z <- margin.table(Kreuzt, 1)
   S <- margin.table(Kreuzt, 2)
