@@ -23,16 +23,27 @@ funktion2 <- function(x,...){
 funktion2(x)
 
 #c)
-Funktion3 <- function(x,y){
-  print("Korrelation Bravais-Pearson" <- cor(x, y, method = "pearson"))
-  print("Korrelation Kendall" <- cor(x,y, method = "kendall"))
-  print("Korrelation Spearman" <- cor(x,y, method = "spearman"))
+Funktion3  <- function(x,y,...){
+  Kreuzt <- table(x, y)
+  Z <- margin.table(Kreuzt, 1)
+  S <- margin.table(Kreuzt, 2)
+  n <- sum(Z)
+  K <- length(Z)
+  L <- length(S)
+  X_quadr <- matrix(0, nrow = K, ncol = L)
+  for (i in 1:K) {
+    for (j in 1:L) {
+      X_quadr[i,j] <- ((Kreuzt[i,j]^2) / (Z[i] * S[j]))
+    }
+  }
+  chiquadr <- (n*(sum(X_quadr)-1))
+  print(list(Chi_Quadrat = chiquadr, Pearsons_Kontingenz_ndex = sqrt(chiquadr/(chiquadr+n)),
+             Korrigierter_Pearson_Index = sqrt(min(K,L)/(min(K,L)-1))*sqrt(chiquadr/(chiquadr+n))))
 }
 
-Funktion3(x,y)
+#Kontingenzkoeffizienten um zusammenhaenge zwischen zwei Kategorialen Variablen zu betrachten
 
-#Kovarianzen miteinander vergleichen
-#Die Kovarianz von 
+
 
 #d)
 
