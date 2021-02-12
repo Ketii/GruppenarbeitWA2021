@@ -97,9 +97,65 @@ funktion2(Data$Mathe_LK)
 #[1] "Ja"
 
 
-<<<<<<< HEAD
 
-=======
+#setwd("C:/Users/User/Documents/GitHub/GruppenarbeitWA2021/1")
+daten <- read.csv("Datensatz_Simulation.csv")
+
+str(daten)
+
+#deskriptive bivariate Statistiken:
+
+#c) Zusammenhang zwischen zwei kategoriellen Variablen:
+
+#i) Studienfach ~ MatheLK
+
+Funktion3(daten$Studienfach,daten$Mathe_LK)
+
+#$Chi_Quadrat              
+#[1] 6.477177
+
+#$Pearsons_Kontingenz_ndex
+#[1] 0.2466406
+
+#$Korrigierter_Pearson_Index
+#[1] 0.3488025
+
+
+#maessiger Zusammenhang zwischen Studienfachwahl und MatheLK
+
+#ansonsten keine kategoriellen Variablen?
+
+#d) Zusammenhang zwischen einer dichotomen und einer metrischen Variablen
+
+#i) MatheLK ~ Alter
+
+mathelk <- daten$Mathe_LK
+mathelk <- as.logical(mathelk=="Ja") #daten$Mathe_LK muss in Logikvektor umgewandelt werden
+#damit die Funktion4 funktioniert
+
+
+funktion4(daten$Alter,mathelk)   #gruppierung auf der haelfte (25)
+#[1] 0.1230587                   #gruppierung: Peronen unter 25, Personen >= 25
+
+
+#ii) MatheLK ~ Interesse Mathematik
+
+funktion4(daten$Interesse_an_Mathematik,mathelk,gr=5) #gruppiert auf weniger als 5 und >=5
+
+#[1] 0.02241161
+
+#kein Zusammenhang?
+
+#iii) MatheLK ~ Interesse Programmieren
+
+funktion4(daten$Interesse_am_Programmieren,mathelk,gr=5) #gruppiert auf 5
+funktion4(daten$Interesse_am_Programmieren,mathelk,gr=4) #gruppiert auf 4
+#[1] 0.1211916
+#[1] 0.1222973
+
+#leichter Zusammenhang? 
+
+#Zusammenhang bezieht sich auf die 2 Gruppen und die dichotomen Variablen
 
 
 
