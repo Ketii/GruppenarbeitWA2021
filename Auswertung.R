@@ -14,6 +14,7 @@ Funktion1 <- function(x){
   print(list("Arithmetisches Mittel" = arithmetisches, Median = Median, Standardabweichung = Standardabweichung))
 }
 
+
 Funktion1(Data$Alter)
 
 #[1] 25.24
