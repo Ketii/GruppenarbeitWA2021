@@ -4,11 +4,17 @@
 #arithmetisches Mittel
 
 
+
 Funktion1 <- function(x){
-  print("arithmetisches Mittel" <- mean(x))
-  print("Median" <- median(x))
-  print("Standardabweichung" <- sd(x))
+  
+  arithmetisches <- mean(x)
+  Median <- median(x)
+  Standardabweichung <- sd(x)
   arithmetisches <- mymean(x)
+  Median <- mymedian(x)
+  Standardabweichung <- mysd(x)
+  
+  print(list("Arithmetisches Mittel" = arithmetisches, Median = Median, Standardabweichung = Standardabweichung))
 }
 
 #b)
