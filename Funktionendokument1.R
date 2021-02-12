@@ -22,7 +22,6 @@ funktion2 <- function(x,...){
   print(list("Tabelle"= haeuf, "Modalwert"=modal))  #Ergebnisse als Liste ausgeben
 }
 
-funktion2(x)
 
 #c)
 Funktion3  <- function(x,y,...){
@@ -60,19 +59,17 @@ funktion4 <- function(x,y,gr){
   grbp(x,y,gr)
 }
 
-funktion4(x,y)
 
 #gibt gruppierten Bravais Pearson Korrelationskoeffizienten aus
 #gr ist die Grenze, die die metrischen Daten in zwei Gruppen einteilt
 #Gruppe 1: daten <gr , Gruppe 2: daten >= gr
 #nach Voreinstellung wird die Grenze auf der Haelfte gesetzt
 
-#e)
 
 #e)
 
 Funktion5<-function(x){
-  if (!is.numeric(x)) stop("Die Variablen müssen mindestens ordinal sein")
+  if (!is.numeric(x)) stop("Die Variablen muessen mindestens ordinal sein")
   n<-length(x)
   y<-c(NA)
   for( i in 1:n) {
@@ -89,9 +86,9 @@ Funktion5<-function(x){
   t<-table(y)
   print(list("Vektor"=y,"Tabelle"=t))
 }
-Funktion5(x)
 
 
+#f)
 Funktion6 <- function(vec1, vec2, vec3, vec4){
   par(mfrow = c(2,2),oma = c(0, 0, 2, 0))
   

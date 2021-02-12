@@ -1,15 +1,17 @@
-<<<<<<< HEAD
-Data<-read.csv("C:\\Users\\kayab\\Documents\\Studium\\GruppenarbeitWA2021\\Datensatz_Simulation.csv")
+
+Data <-read.csv("Datensatz_Simulation.csv")
 
 
 #a)
-#arithmetisches Mittel
 
 
 Funktion1 <- function(x){
-  print("arithmetisches Mittel" <- mean(x))
-  print("Median" <- median(x))
-  print("Standardabweichung" <- sd(x))
+  
+  arithmetisches <- mymean(x)
+  Median <- mymedian(x)
+  Standardabweichung <- mysd(x)
+  
+  print(list("Arithmetisches Mittel" = arithmetisches, Median = Median, Standardabweichung = Standardabweichung))
 }
 
 Funktion1(Data$Alter)
@@ -52,7 +54,7 @@ funktion2 <- function(x,...){
 
 
 
-funktion2(Sim$Alter)
+funktion2(Data$Alter)
 
 
 #$`Tabelle`
@@ -144,7 +146,7 @@ funktion4(daten$Interesse_an_Mathematik,mathelk,gr=5) #gruppiert auf weniger als
 
 #[1] 0.02241161
 
-#kein Zusammenhang?
+#kein Zusammenhangae
 
 #iii) MatheLK ~ Interesse Programmieren
 
@@ -153,18 +155,19 @@ funktion4(daten$Interesse_am_Programmieren,mathelk,gr=4) #gruppiert auf 4
 #[1] 0.1211916
 #[1] 0.1222973
 
-#leichter Zusammenhang? 
+#leichter Zusammenhangae 
 
 #Zusammenhang bezieht sich auf die 2 Gruppen und die dichotomen Variablen
 
 
+Datensatz <- read.csv("Datensatz_Simulation.csv")
 
 
-#Funktion 5 
+#e) Funktion 5 
 
 Funktion5
 #mit dieser Funktion betrachten wir wieviele Beobachtungen kleiner-gleich dem jeweiligen 25 % 
-#und größer-gleich dem 75% Quantil der Variable sind 
+#und groesser-gleich dem 75% Quantil der Variable sind 
 
 #Alter
 Funktion5(Datensatz$Alter)
@@ -175,9 +178,9 @@ Funktion5(Datensatz$Alter)
 #25      42      33 
 
 #33 Beobachtungen der Variable Alter sind kleiner-gleich 24, dem 25 % Quantil, 25 Beobachtungen 
-#liegen sind größer-gleich 27, dem 75 % Quantil der Variable Alter. Dies lässt darauf schließen, 
-#dass die Altersverteilung leicht rechts-schief ist und die Gruppe der jungen Befragten stärker 
-#vertreten ist als die Gruppe der älteren Befragten
+#liegen sind groesser-gleich 27, dem 75 % Quantil der Variable Alter. Dies laesst darauf schliessen, 
+#dass die Altersverteilung leicht rechts-schief ist und die Gruppe der jungen Befragten staerker 
+#vertreten ist als die Gruppe der aelteren Befragten
 
 #Interesse an Mathematik 
 Funktion5(Datensatz$Interesse_an_Mathematik)
@@ -187,7 +190,7 @@ Funktion5(Datensatz$Interesse_an_Mathematik)
 #39      24      37 
 
 #37 Beobachtungen sind kleiner-gleich 5, dem 25 % Quantil der Variable "Interesse an Mathematik", 
-#39 Beobachtungen sind größer-gleich 7, dem 75 % Quantil. Es haben also die meisten Befragten
+#39 Beobachtungen sind groesser-gleich 7, dem 75 % Quantil. Es haben also die meisten Befragten
 #ein sehr hohes Interesse an Mathematik.
 
 #Interesse am Programmieren
@@ -198,21 +201,20 @@ Funktion5(Datensatz$Interesse_am_Programmieren)
 #hoch  mittel niedrig 
 #33      40      27 
 
-#27 Beobachtungen sind kleiner-gleich 3, dem 25 % Quantil und 33 Beobachtungen sind größer-gleich
-#7, dem 75 % Quantil der Variable "Interesse am Programmieren". Die häufigste Antwort der 
-#Befragten auf die Frage nach ihrem Interesse am Programmieren war also die höchsmögliche Punktzahl.
+#27 Beobachtungen sind kleiner-gleich 3, dem 25 % Quantil und 33 Beobachtungen sind groesser-gleich
+#7, dem 75 % Quantil der Variable "Interesse am Programmieren". Die haeufigste Antwort der 
+#Befragten auf die Frage nach ihrem Interesse am Programmieren war also die hoechsmoegliche Punktzahl.
 
-#Funktion 6
+#f) Funktion 6
 
 Funktion6
 #Diese Funktion beschreibt den Datensatz visuell
 
 Funktion6(Datensatz$Alter, Datensatz$Mathe_LK, Datensatz$Interesse_an_Mathematik, Datensatz$Studienfach )
 
-#Bie beiden Balkendiagramme bestätigen unsere Beobachtungen, die wir mit Hilfe von Funktion 5
+#Bie beiden Balkendiagramme bestaetigen unsere Beobachtungen, die wir mit Hilfe von Funktion 5
 #getroffen haben. 
 #Das Kreisdiagramm zur Variable "Mathe LK" zeigt deutlich, dass die Befragten, die einen Mathe-
-#Leistungskurs belegten überwiegt
+#Leistungskurs belegten ueberwiegt
 #Das Kreisdiagramm zur Variable "Studienfach" zeigt, dass Statistik Studierende unter den 
-#Befragten am stärksten vertreten waren. 
->>>>>>> 5e2fefa59839a765b07a8d31cd1c6db417fa6d61
+#Befragten am staerksten vertreten waren. 
