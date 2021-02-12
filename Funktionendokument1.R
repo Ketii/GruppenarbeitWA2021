@@ -7,9 +7,6 @@
 
 Funktion1 <- function(x){
   
-  arithmetisches <- mean(x)
-  Median <- median(x)
-  Standardabweichung <- sd(x)
   arithmetisches <- mymean(x)
   Median <- mymedian(x)
   Standardabweichung <- mysd(x)
