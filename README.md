@@ -17,7 +17,9 @@ Die Diskussionen zu den Aufgaben liegen als Issues im Respository vor
 zum fehlerfreien Durchlaufen der R Skripte bitte...
 
 als 1. das Funktionendokument2.R
+
 als 2. Funktionendokument1.R
+
 und als 3. Auswertung.R
 
 durchlaufen lassen
