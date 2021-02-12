@@ -26,7 +26,7 @@ myvar <- function(x){
   }
   
 mysd <- function(x){
-    sqrt(myvar)
+    sqrt(myvar(x))
   }
   
 
