@@ -19,7 +19,7 @@ Funktion1 <- function(x){
 funktion2 <- function(x,...){
   haeuf <- table(x)      #haufigkeitstabelle
   modal <- names(which.max(table(x)))        #modalwert
-  print(list("Tabelle"= haeuf, "Modalwert"=modal))
+  print(list("Tabelle"= haeuf, "Modalwert"=modal))  #Ergebnisse als Liste ausgeben
 }
 
 funktion2(x)
@@ -63,6 +63,9 @@ funktion4 <- function(x,y,gr){
 funktion4(x,y)
 
 #gibt gruppierten Bravais Pearson Korrelationskoeffizienten aus
+#gr ist die Grenze, die die metrischen Daten in zwei Gruppen einteilt
+#Gruppe 1: daten <gr , Gruppe 2: daten >= gr
+#nach Voreinstellung wird die Grenze auf der Haelfte gesetzt
 
 #e)
 
