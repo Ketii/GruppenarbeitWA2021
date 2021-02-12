@@ -160,6 +160,27 @@ funktion4(daten$Interesse_am_Programmieren,mathelk,gr=4) #gruppiert auf 4
 
 #Zusammenhang bezieht sich auf die 2 Gruppen und die dichotomen Variablen
 
+#Zusammenhang der einzelnen Studienfächer und dem Interesse an Mathe und Programmieren
+
+mathe <- daten$Studienfach=="Mathematik"
+statistik <- daten$Studienfach=="Statistik"
+informatik <- daten$Studienfach=="Informatik"
+
+funktion4(daten$Interesse_an_Mathematik,mathe)
+#0.131372
+funktion4(daten$Interesse_an_Mathematik,statistik)
+#-0.05901671
+funktion4(daten$Interesse_an_Mathematik,informatik)
+#-0.1289205
+
+funktion4(daten$Interesse_am_Programmieren,mathe)
+#0.5358703
+funktion4(daten$Interesse_am_Programmieren,statistik)
+#-0.07919014
+funktion4(daten$Interesse_am_Programmieren,informatik)
+#-0.183537
+
+
 
 Datensatz <- read.csv("Datensatz_Simulation.csv")
 
