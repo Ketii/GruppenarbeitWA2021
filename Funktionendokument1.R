@@ -8,9 +8,8 @@ Funktion1 <- function(x){
   print("arithmetisches Mittel" <- mean(x))
   print("Median" <- median(x))
   print("Standardabweichung" <- sd(x))
+  arithmetisches <- mymean(x)
 }
-
-Funktion1(x)
 
 #b)
 
