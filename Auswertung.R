@@ -7,10 +7,14 @@ Data<-read.csv("C:\\Users\\kayab\\Documents\\Studium\\GruppenarbeitWA2021\\Daten
 
 
 Funktion1 <- function(x){
-  print("arithmetisches Mittel" <- mean(x))
-  print("Median" <- median(x))
-  print("Standardabweichung" <- sd(x))
+  
+  arithmetisches <- mymean(x)
+  Median <- mymedian(x)
+  Standardabweichung <- mysd(x)
+  
+  print(list("Arithmetisches Mittel" = arithmetisches, Median = Median, Standardabweichung = Standardabweichung))
 }
+
 
 Funktion1(Data$Alter)
 
