@@ -1,5 +1,5 @@
 
-#Funktionen für Funktion1
+#Funktionen fuer Funktion1
 mymean <- function(x){
     sum(x)/length(x)
   }
@@ -40,4 +40,7 @@ grbp <- function(x,y,gr) {
       d <- length(which(x >= gr & y == F))
       rG <- (a*d-b*c)/sqrt((a+b)*(c+d)*(a+c)*(b+d))  #gruppierter Bravais Pearson
       print(rG)
-    }
+}
+
+#Berechnung des gruppierten Bravais Pearson Korrelationskoeffizienten
+#die von Funktion4 weitergegebene Grenze wird verwendet
