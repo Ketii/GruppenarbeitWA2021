@@ -1,0 +1,118 @@
+---
+title: "Zusammenfassung der Auswertung und der Diskussion"
+author: "Kaya Maria Bayer, Danuscha Große-Hering, Ketevan Gurtskaia, Alicia Hemmersbach, Julia Keiter"
+date: "26.Februar 2021"
+output: pdf_document
+---
+
+```{r}
+setwd("C:\\Users\\danus\\OneDrive\\Dokumente\\GitHub\\GruppenarbeitWA2021")
+Data<-read.csv("Datensatz_Simulation.csv")
+load("AlleFunktionenalsWorkspace.RData")
+
+```
+
+
+# Funktion 1
+
+```{r}
+Funktion1(Data$Alter)
+```
+Das artithmetische Mittel der Altersangaben betraegt 25.24. Der Median der Altersangaben betraegt 25 und die Standardabweichung ca. 2.27. Der Erwartungswert der wahren Daten ist 25 mit der Standartabweichung 2.
+
+
+
+```{r}
+Funktion1(Data$Interesse_an_Mathematik)
+```
+Es ist zu erkennen, dass das Interesse an Mathematik recht hoch ist. Das arithmetische Mittel 
+betraegt 7.73, der Median 6 und die Standardabweichung ca. 1.3
+
+
+```{r}
+Funktion1(Data$Interesse_am_Programmieren)
+```
+Das Interesse an Programmieren ist etwas geringer als das an Mathemaatik. Hierbei betraegt das arithmetische Mittel 4.94, der Median 5 und die Standardabweichung ca. 1.9
+
+
+
+
+
+
+
+
+# Funktion 3: Zusammenhang zwischen zwei kategoriellen Variablen:
+
+#i) Studienfach ~ MatheLK
+```{r}
+Funktion3(Data$Studienfach,Data$Mathe_LK)
+```
+Hier hat das Stdienfach und die Belegung des Mathe Leistungskurses einen mäßigen Zusammenhang, welcher jedoch auch dadurch zu erklären wäre, dass die meisten Studierenden diesen Leistungskurs auch schon gewählt hatte.
+
+
+
+
+
+
+
+
+
+```{r}
+Funktion3(Data$Studienfach,Data$Interesse_am_Programmieren)
+```
+
+ 
+```{r}
+Funktion3(Data$Studienfach,Data$Interesse_an_Mathematik)
+```
+
+Hier sieht man, dass es einen Starken Zusammenhang zwischen dem Studiengang un dem Interesse an Mathematik bzw, das Interesse am Programmieren gibt. 
+ 
+
+
+
+```{r}
+mathelk <- Data$Mathe_LK
+mathelk <- as.logical(mathelk=="Ja")
+funktion4(Data$Alter,mathelk)  
+```
+Es scheint einen zufälligen Zusammenhang zu geben.
+
+
+
+# Funktion5
+
+```{r}
+Funktion5(Data$Alter)
+```
+
+Mit dieser Funktion betrachten wir wieviele Beobachtungen kleiner-gleich dem jeweiligen 25 % und größer-gleich dem 75% Quantil der Variable sind 
+
+
+Hier scheinen die meisten "Befragten" jünger als 26 Jahre zu sein.
+
+```{r}
+Funktion5(Data$Interesse_an_Mathematik)
+```
+
+
+
+37 Beobachtungen sind kleiner-gleich 5, dem 25 % Quantil der Variable "Interesse an Mathematik", 
+39 Beobachtungen sind größer-gleich 7, dem 75 % Quantil. Es haben also die meisten Befragten
+ein sehr hohes Interesse an Mathematik.
+
+```{r}
+Funktion5(Data$Interesse_am_Programmieren)
+```
+
+27 Beobachtungen sind kleiner-gleich 3, dem 25 % Quantil und 33 Beobachtungen sind größer-gleich
+7, dem 75 % Quantil der Variable "Interesse am Programmieren". Die häufigste Antwort der 
+Befragten auf die Frage nach ihrem Interesse am Programmieren war also die höchsmögliche Punktzahl.
+
+```{r}
+Funktion6(Data$Alter, Data$Mathe_LK, Data$Interesse_an_Mathematik, Data$Studienfach )
+```
+
+Diese Funktion beschreibt den Datensatz visuell
+
+Die beiden Balkendiagramme bestätigen unsere Beobachtungen, die wir mit Hilfe von Funktion 5 getroffen haben. Das Kreisdiagramm zur Variable "Mathe LK" zeigt deutlich, dass die Befragten, die einen Mathe-Leistungskurs belegten überwiegt. Das Kreisdiagramm zur Variable "Studienfach" zeigt, dass Statistik Studierende unter den Befragten am stärksten vertreten waren. 
